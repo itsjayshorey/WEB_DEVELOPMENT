@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a table in html</title>
+</head>
+<body>
+    <p>Given below is the syntax of the table</p>
+    <p><hr></p>
+    <table>
+        <caption>Table Caption</caption>
+        <tr>
+            <th>Header1</th>
+            <th>Header2</th>
+        </tr>
+        <tr>
+            <td>Data1</td>
+            <td>Data2</td>
+        </tr>
+    </table>
+    <main>
+        <table border="black"><!-- This is not a good practice but we can do this -->
+            <tr>
+                <th>ITEM</th>
+                <th>PRICE</th>
+            </tr>
+            <tr>
+                <td>Frooti</td>
+                <td>10rs</td>
+            </tr>
+            <tr>
+                <td>Samosa</td>
+                <td>12rs</td>
+            </tr>
+            <tr>
+                <td>Chips</td>
+                <td>20rs</td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>There is thead tbody and then table footer</p>
+    </footer>
+    <p>colspan and rowspan learnings</p>
+    <table border="black"><!-- This is not a good practice but we can do this -->
+        <tr>
+            <th rowspan="2">ITEM</th>
+            <th colspan="2">PRICE</th>
+        </tr>
+        <tr>
+            <th>INR</th>
+            <th>USD</th>
+        </tr>
+        <tr>
+            <td>Frooti</td>
+            <td>10rs</td>
+            <td>.12$</td>
+        </tr>
+        <tr>
+            <td>Samosa</td>
+            <td>12rs</td>
+            <td>.15$</td>
+        </tr>
+        <tr>
+            <td>Chips</td>
+            <td>20rs</td>
+            <td>.24$</td>
+        </tr>
+    </table>
+    <p>practice question</p>
+    <table border="Red">
+        <caption>Practice question</caption>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2">Average</th>
+                <th rowspan="2">Red eyes</th>
+            </tr>
+            <tr>
+                <th>Height</th>
+                <th>Weight</th>
+            </tr>
+            <tr>
+                <td>Males</td>
+                <td>1.9</td>
+                <td>0.003</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>Females</td>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+    </table>
+</body>
+</html>
