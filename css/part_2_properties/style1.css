@@ -1,0 +1,28 @@
+/* Universal selector */
+*{
+    font-family: "Courier-New";
+    color: black;
+}
+h1{
+    color: #b92b27;
+}
+/* it is case sensitive */
+/* # is for id */
+#myId{
+    color: #f0f000;
+}
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+/* . is for class */
+.myClass{
+    background-color: #f0f000;
+}
+.upvote{
+    background-color: #b92b27;
+    color: white;
+}

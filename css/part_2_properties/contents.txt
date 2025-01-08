@@ -1,0 +1,7 @@
+selectors 
+sibling child attribute 
+pseudo class
+pseudo element
+
+cascading and specificity
+inheritance

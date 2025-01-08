@@ -1,0 +1,56 @@
+h1{
+    color: green;
+    background-color: whitesmoke;
+    font-family: fantasy;
+}
+p{
+    color: red;
+    background-color: rgb(200,200,200);
+    font-family: copperplate;
+}
+button{
+    color: sandybrown;
+    background: blanchedalmond;
+}
+h2{
+    color: blue;
+    background-color: #f0f000;
+    /* Here # is very nescessary */
+    text-align: right;
+    /* This is with respect to the parent element not the width of the screen */
+    width: 50%;
+    font-family: avantgarde,didot;
+    /*  */
+}
+h5{
+    color: #f0f000;
+    background-color: blue;
+    text-align: justify;
+    width: 50%;
+    text-decoration: underline blanchedalmond dashed;
+}
+h3{
+    color: #f0f000;
+    background-color: lightsalmon;
+    text-align: start;
+    width: 50%;
+    line-height: 10;
+    word-spacing: 10;
+    text-decoration: line-through wavy;
+}
+h6{
+    color: #f0f000;
+    background-color: lightcyan;
+    word-spacing: 10;
+    text-align: end;
+    font-weight: bolder;
+    /* This is for boldness with respect to the previous*/
+}
+a{
+    color: #f0f000;
+    background-color: lightcoral;
+    text-align: center;
+    font-style: italic;
+    /* This is for italic with respect to the previous*/
+}
+/* h1 is selector color is property value is red */

@@ -1,0 +1,1 @@
+style1_ : - basics of css like linking like using <link rel='stylesheet' href='style1.css'> 

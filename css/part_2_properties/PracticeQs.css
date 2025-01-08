@@ -1,0 +1,22 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    color: #1b74b4;
+}
+/* #searchbtn #login{
+    background-color: black;
+    color: white;
+} */
+.userbtn{
+    background-color: #1b74b4;
+    color: white;
+}
+#signup{
+    background-color: #1b74b4;
+    color: white;
+}
+.class_btn{
+    background-color: aqua;
+    color: white;
+}
