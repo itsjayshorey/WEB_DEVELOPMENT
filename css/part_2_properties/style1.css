@@ -26,3 +26,36 @@ h1{
     background-color: #b92b27;
     color: white;
 }
+/* DESCENDENT TAGS */
+div p{
+    background-color: aliceblue;
+    /* property: this and this */
+}
+p a{
+    color: purple;
+    background-color: yellow;
+}
+/* .post a{
+    color: orange
+} */
+/* COMBINATORS */
+/* adjacent siblings */
+nav ul li a{
+    color:hotpink;
+}
+nav ul li{
+    color:greenyellow;
+}
+p+h3{
+    text-decoration: underline;
+}
+.upvote + button
+{
+    background-color: blanchedalmond;
+}
+
+/* CHILD COMBINATOR */
+/* It helps in suming all the color of buttons */
+span>button{
+    color:#b92b27
+}
