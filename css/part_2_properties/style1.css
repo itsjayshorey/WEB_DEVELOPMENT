@@ -111,3 +111,13 @@ p::selection{
 }
 /* specificity id >class/attribute and pseudoclass> element and pseudo element */
 /* Inline style has the highest property */
+/*  Most important heading in css !important */
+h3{
+    color: blue !important;
+}
+/* Inheritance in CSS
+ div then p then ul i.e. the properties will be inherited from the parent subgroup 
+*/
+
+
+/* Some properties are non -inheritable */
