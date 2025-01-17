@@ -59,3 +59,17 @@ p+h3{
 span>button{
     color:#b92b27
 }
+input[type="text"]{
+    color: green;
+}
+input[type="password"]
+{
+    color: aqua;
+}
+input[type]
+{
+    background-color: grey;
+}
+div[id="my id"] p{
+    background-color: bisque;
+}
