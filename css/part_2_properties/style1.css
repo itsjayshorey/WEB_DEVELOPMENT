@@ -73,3 +73,41 @@ input[type]
 div[id="my id"] p{
     background-color: bisque;
 }
+
+/* Pseudo class */
+/* special state of the selected elements */
+/* hover active checked nth-of-type */
+
+button:hover{
+    background-color: black;
+    color: antiquewhite;
+}
+button:active{
+    background-color: purple;
+    color: antiquewhite;
+}
+p:active{
+    color: pink;
+}
+input[type="radio"]:checked + label{
+    color: aquamarine;
+}
+/* nth element means the nth element of the sequence */
+.post:nth-of-type(2n){
+    background-color: blanchedalmond;
+}
+
+/* Pseudo elements */
+
+/* like changing last letter */
+h1::first-letter{
+    color: blanchedalmond;
+}
+p::first-line{
+    color: cyan;
+}
+p::selection{
+    color:limegreen;
+}
+/* specificity id >class/attribute and pseudoclass> element and pseudo element */
+/* Inline style has the highest property */
