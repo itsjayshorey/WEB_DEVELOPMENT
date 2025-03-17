@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+        .option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .option:hover {
+            background-color: #add8e6;
+        }
+        #nextBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #008cba;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        #nextBtn:hover {
+            background-color: #005f73;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Biology Quiz</h1>
+        <p id="question"></p>
+        <div id="options"></div>
+        <button id="nextBtn" onclick="nextQuestion()" style="display: none;">Next</button>
+        <p id="score"></p>
+    </div>
+
+    <script>
+        const quiz = [
+            {
+                question: "What is the powerhouse of the cell?",
+                options: ["Nucleus", "Mitochondria", "Ribosome", "Chloroplast"],
+                answer: "Mitochondria"
+            },
+            {
+                question: "Which blood type is known as the universal donor?",
+                options: ["O+", "O-", "A+", "AB-"],
+                answer: "O-"
+            },
+            {
+                question: "What gas do plants absorb from the atmosphere?",
+                options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+                answer: "Carbon Dioxide"
+            },
+            {
+                question: "What organ is responsible for pumping blood throughout the body?",
+                options: ["Liver", "Lungs", "Heart", "Kidney"],
+                answer: "Heart"
+            },
+            {
+                question: "Which vitamin is produced when the skin is exposed to sunlight?",
+                options: ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D"],
+                answer: "Vitamin D"
+            },
+            {
+                question: "What is the basic unit of life?",
+                options: ["Tissue", "Organ", "Cell", "Molecule"],
+                answer: "Cell"
+            },
+            {
+                question: "Which part of the plant is responsible for photosynthesis?",
+                options: ["Roots", "Stem", "Leaves", "Flowers"],
+                answer: "Leaves"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            let questionElement = document.getElementById("question");
+            let optionsElement = document.getElementById("options");
+            
+            questionElement.textContent = quiz[currentQuestionIndex].question;
+            optionsElement.innerHTML = "";
+
+            quiz[currentQuestionIndex].options.forEach(option => {
+                let button = document.createElement("button");
+                button.textContent = option;
+                button.classList.add("option");
+                button.onclick = function() { checkAnswer(option, button); };
+                optionsElement.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selected, button) {
+            if (selected === quiz[currentQuestionIndex].answer) {
+                score++;
+                button.style.backgroundColor = "#90EE90";
+            } else {
+                button.style.backgroundColor = "#FF6347";
+            }
+            document.getElementById("nextBtn").style.display = "block";
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quiz.length) {
+                loadQuestion();
+                document.getElementById("nextBtn").style.display = "none";
+            } else {
+                document.getElementById("question").textContent = "Quiz Over!";
+                document.getElementById("options").innerHTML = "";
+                document.getElementById("score").textContent = `Your score: ${score}/${quiz.length}`;
+                document.getElementById("nextBtn").style.display = "none";
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
